@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import React from 'react';
 import { View, Text } from 'react-native';
 import { Feather as Icon } from '@expo/vector-icons';
@@ -9,7 +10,7 @@ const Page = ({ backgroundColor, iconName, title }) => {
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor
+        backgroundColor,
       }}
     >
       <Icon name={iconName} size={172} color="white" />

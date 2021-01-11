@@ -1,17 +1,16 @@
-import React, { useRef } from 'react';
+import React, {useRef} from 'react';
 import {View} from 'react-native';
 import ViewPager from '@react-native-community/viewpager';
 import Footer from './components/Footer';
 import Page from './components/Page';
-import { useNavigation } from '@react-navigation/native';
+import {useNavigation} from '@react-navigation/native';
 
 const Onboarding = () => {
-
   const pagerRef = useRef(null);
 
   const navigation = useNavigation();
 
-  const handlePageChange = pageNumber => {
+  const handlePageChange = (pageNumber) => {
     pagerRef.current.setPage(pageNumber);
   };
 
@@ -21,7 +20,7 @@ const Onboarding = () => {
         <View key="1">
           <Page
             backgroundColor="#03A9F4"
-            iconName="filter"
+            iconName="chevron-left"
             title="Interact with malawian celebrities"
           />
           <Footer

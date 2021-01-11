@@ -14,11 +14,11 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#eb8f8f'
+    backgroundColor: '#ececec'
   },
   text: {
     fontSize: 20,
-    color: 'white'
+    color: "#29B6F6"
   }
 });
 

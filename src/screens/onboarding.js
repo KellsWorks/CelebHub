@@ -50,7 +50,7 @@ const Onboarding = () => {
         <View key="3">
           <Page
             backgroundColor="#0288D1"
-            iconName="cloud-drizzle"
+            iconName="feather"
             title="Get links to latest music"
           />
           <Footer

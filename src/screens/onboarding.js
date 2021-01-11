@@ -20,7 +20,7 @@ const Onboarding = () => {
         <View key="1">
           <Page
             backgroundColor="#03A9F4"
-            iconName="chevron-left"
+            iconName="message-circle"
             title="Interact with malawian celebrities"
           />
           <Footer

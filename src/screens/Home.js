@@ -1,10 +1,17 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import {View, StyleSheet} from 'react-native';
+import {createMaterialBottomTabNavigator} from '@react-navigation/material-bottom-tabs';
+import Page from './components/Page';
 
 const Home = () => {
+  const Tab = createMaterialBottomTabNavigator();
+
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Home Screen</Text>
+      <Tab.Navigator>
+        <Tab.Screen name="Home" component={Page} />
+        <Tab.Screen name="Settings" component={Page} />
+      </Tab.Navigator>
     </View>
   );
 };
@@ -14,12 +21,12 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#ececec'
+    backgroundColor: '#ececec',
   },
   text: {
     fontSize: 20,
-    color: "#29B6F6"
-  }
+    color: '#29B6F6',
+  },
 });
 
 export default Home;

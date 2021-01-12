@@ -16,7 +16,7 @@ const Page = ({ backgroundColor, iconName, title }) => {
     >
       <Icon name={iconName} type="feather" size={172} color="white" />
       <View style={{ marginTop: 16 }}>
-        <Text style={ styles.baseText } >
+        <Text style={ styles.text } >
           {title}
         </Text>
       </View>
@@ -25,8 +25,8 @@ const Page = ({ backgroundColor, iconName, title }) => {
 };
 
 const styles = StyleSheet.create({
-  baseText: {
-    fontFamily: 'poppins_regular',fontSize: 22, fontWeight: 'bold', color: 'white',
+  text: {
+    fontSize: 22, fontFamily: 'poppins_regular', color: 'white',
   }
 });
 

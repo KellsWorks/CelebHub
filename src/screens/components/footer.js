@@ -1,5 +1,5 @@
-import React  from 'react';
-import { View, useWindowDimensions } from 'react-native';
+import React from 'react';
+import {View, useWindowDimensions} from 'react-native';
 
 import RoundedButton from './RoundedButton';
 
@@ -8,7 +8,7 @@ const Footer = ({
   leftButtonLabel = false,
   leftButtonPress = false,
   rightButtonLabel = false,
-  rightButtonPress = false
+  rightButtonPress = false,
 }) => {
   const windowWidth = useWindowDimensions().width;
   const HEIGHT = windowWidth * 0.11;
@@ -23,13 +23,12 @@ const Footer = ({
         backgroundColor,
         // opacity: 0.6,
         alignItems: 'center',
-        paddingHorizontal: FOOTER_PADDING
-      }}
-    >
-    {leftButtonLabel && (
-    <RoundedButton label={leftButtonLabel} onPress={leftButtonPress} />
-  )}
-  <RoundedButton label={rightButtonLabel} onPress={rightButtonPress} />
+        paddingHorizontal: FOOTER_PADDING,
+      }}>
+      {leftButtonLabel && (
+        <RoundedButton label={leftButtonLabel} onPress={leftButtonPress} />
+      )}
+      <RoundedButton label={rightButtonLabel} onPress={rightButtonPress} />
     </View>
   );
 };

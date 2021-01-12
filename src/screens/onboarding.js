@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import React, {useRef} from 'react';
 import {View} from 'react-native';
 import ViewPager from '@react-native-community/viewpager';

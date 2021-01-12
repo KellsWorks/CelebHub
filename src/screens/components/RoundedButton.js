@@ -1,5 +1,7 @@
 import React from 'react';
-import { Text, TouchableOpacity } from 'react-native';
+import { Button, TouchableOpacity } from 'react-native';
+import {Icon} from 'react-native-elements';
+import { IconButton } from 'react-native-paper';
 
 const RoundedButton = ({ label, onPress }) => {
   return (
@@ -7,9 +9,7 @@ const RoundedButton = ({ label, onPress }) => {
       style={{ alignItems: 'center', justifyContent: 'center' }}
       onPress={onPress}
     >
-      <Text style={{ fontSize: 22, color: 'white', fontWeight: 'bold' }}>
-        {label}
-      </Text>
+      <Icon name={label} type="feather" size={24} color="white" />
     </TouchableOpacity>
   );
 };

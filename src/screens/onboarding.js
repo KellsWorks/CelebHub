@@ -25,7 +25,7 @@ const Onboarding = () => {
           />
           <Footer
             backgroundColor="#29B6F6"
-            rightButtonLabel="Next"
+            rightButtonLabel="chevron-right"
             rightButtonPress={() => {
               handlePageChange(1);
             }}
@@ -34,13 +34,13 @@ const Onboarding = () => {
         <View key="2">
           <Page
             backgroundColor="#039BE5"
-            iconName="cloud-drizzle"
+            iconName="briefcase"
             title="Become a celebrity manager"
           />
           <Footer
             backgroundColor="#29B6F6"
-            rightButtonLabel="Next"
-            leftButtonLabel="Back"
+            rightButtonLabel="chevron-right"
+            leftButtonLabel="chevron-left"
             leftButtonPress={() => {
               handlePageChange(0);
             }}
@@ -52,13 +52,13 @@ const Onboarding = () => {
         <View key="3">
           <Page
             backgroundColor="#0288D1"
-            iconName="feather"
+            iconName="play-circle"
             title="Get links to latest music"
           />
           <Footer
             backgroundColor="#29B6F6"
-            rightButtonLabel="Continue"
-            leftButtonLabel="Back"
+            rightButtonLabel="log-in"
+            leftButtonLabel="chevron-left"
             leftButtonPress={() => {
               handlePageChange(1);
             }}

@@ -19,14 +19,17 @@
     "expo": "^40.0.0",
     "expo-file-system": "~9.3.0",
     "expo-status-bar": "^1.0.3",
+    "feather-icons": "^4.28.0",
     "react": "16.13.1",
     "react-native": "0.63.4",
+    "react-native-elements": "^3.1.0",
     "react-native-gesture-handler": "~1.8.0",
     "react-native-onboarding-swiper": "^1.1.4",
     "react-native-paper": "^4.6.0",
     "react-native-reanimated": "~1.13.0",
     "react-native-safe-area-context": "3.1.9",
     "react-native-screens": "~2.15.0",
+    "react-native-unimodules": "^0.12.0",
     "react-native-vector-icons": "^7.1.0"
   },
   "devDependencies": {

@@ -26,8 +26,7 @@ const Page = ({ backgroundColor, iconName, title }) => {
 
 const styles = StyleSheet.create({
   baseText: {
-    fontFamily: 'PoppinsRegular'
-    , fontSize: 24, fontWeight: 'bold', color: 'white'
+    fontFamily: 'poppins_regular',fontSize: 22, fontWeight: 'bold', color: 'white',
   }
 });
 

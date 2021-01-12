@@ -80,6 +80,11 @@
 		<string>PoppinsLight.ttf</string>
 		<string>PoppinsMedium.ttf</string>
 		<string>PoppinsRegular.ttf</string>
+		<string>poppins_black.ttf</string>
+		<string>poppins_bold.ttf</string>
+		<string>poppins_light.ttf</string>
+		<string>poppins_medium.ttf</string>
+		<string>poppins_regular.ttf</string>
 	</array>
 </dict>
 </plist>

@@ -1,33 +1,13 @@
 import React from 'react';
-import {Text, StyleSheet} from 'react-native';
-import {BottomNavigation} from 'react-native-paper';
+import {Text, View, StyleSheet} from 'react-native';
 
-const MusicRoute = () => <Text>Music</Text>;
 
-const AlbumsRoute = () => <Text>Albums</Text>;
-
-const RecentsRoute = () => <Text>Recent</Text>;
-
-const Home = () => {
-  const [index, setIndex] = React.useState(0);
-  const [routes] = React.useState([
-    {key: 'music', title: 'Music', icon: 'queue-music'},
-    {key: 'albums', title: 'Albums', icon: 'message-circle'},
-    {key: 'recent', title: 'Recent', icon: 'history'},
-  ]);
-
-  const renderScene = BottomNavigation.SceneMap({
-    music: MusicRoute,
-    albums: AlbumsRoute,
-    recents: RecentsRoute,
-  });
-
+const Home = ({navigation}) => {
+  
   return (
-    <BottomNavigation
-      navigationState={{index, routes}}
-      onIndexChange={setIndex}
-      renderScene={renderScene}
-    />
+    <View>
+      <Text>Hom</Text>
+    </View>
   );
 };
 

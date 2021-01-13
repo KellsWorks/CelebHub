@@ -31,24 +31,13 @@ const SignIn = ({navigation}) => {
       />
       <FormButton
         buttonTitle="Sign in"
-        onPress={() => alert('Sign in clicked!')}
+        onPress={() => navigation.navigate('SignUp')}
       />
 
       <TouchableOpacity style={styles.forgotButton} onPress={() => {}}>
         <Text style={styles.navButtonText}>Forgot password?</Text>
       </TouchableOpacity>
 
-      <SocialButton
-        buttonTitle="Sign in with facebook"
-        btnType="facebook"
-        color="#4867aa"
-        backgroundColor="#e6eaf4" />
-
-      <SocialButton
-        buttonTitle="Sign in with google"
-        btnType="google"
-        color="#de4d41"
-        backgroundColor="#f5e7ea" />
 
       <TouchableOpacity style={styles.forgotButton} onPress={() => {}}>
         <Text style={styles.navButtonText}>
@@ -81,10 +70,10 @@ const styles = StyleSheet.create({
     color: '#051d5f',
   },
   navButtom: {
-    marginTop: 15,
+    marginTop: 10,
   },
   forgotButton: {
-    marginVertical: 35,
+    marginVertical: 10,
   },
   navButtonText: {
     fontSize: 18,

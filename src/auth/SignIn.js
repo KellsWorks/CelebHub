@@ -31,7 +31,7 @@ const SignIn = ({navigation}) => {
       />
       <FormButton
         buttonTitle="Sign in"
-        onPress={() => navigation.navigate('SignUp')}
+        onPress={() => navigation.navigate('Home')}
       />
 
       <TouchableOpacity style={styles.forgotButton} onPress={() => {}}>

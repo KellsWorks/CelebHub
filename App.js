@@ -8,7 +8,6 @@ import Home from './src/screens/Home';
 import SignIn from './src/auth/SignIn';
 import SignUp from './src/auth/SignUp';
 
-import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import {Button} from 'react-native';
 
 const AppStack = createStackNavigator();

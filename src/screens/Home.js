@@ -46,7 +46,7 @@ const Home = ({}) => {
           break;
       }
 
-      return <Icon name={iconName} size={30}  color={focused ? '#00bc48' : '#9c9fa2'}/>;
+      return <Icon name={iconName} size={30}  color={focused ? '#6452A1' : '#9c9fa2'}/>;
     },
   });
 

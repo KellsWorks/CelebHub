@@ -82,7 +82,7 @@ export class Chats extends Component {
 
         </View>
         <View style={{alignContent: 'center', alignSelf: 'center' }}>
-        <View><Text style={{ backgroundColor: '#00bc48', height: 25, paddingLeft: 8, paddingTop: 3, width: 25, alignSelf: 'center', alignContent: 'center', borderRadius: 25, color: '#FFF' }}>4</Text></View>
+        <View><Text style={{ backgroundColor: '#6452A1', height: 25, paddingLeft: 8, paddingTop: 3, width: 25, alignSelf: 'center', alignContent: 'center', borderRadius: 25, color: '#FFF' }}>4</Text></View>
         </View>
         </View>
 
@@ -96,7 +96,7 @@ export class Chats extends Component {
           </View>
         </View>
         <View style={{alignContent: 'center', alignSelf: 'center' }}>
-           <View><Text style={{ backgroundColor: '#00bc48', height: 25, paddingLeft: 8, paddingTop: 3, width: 25, alignSelf: 'center', alignContent: 'center', borderRadius: 25, color: '#FFF' }}>2</Text></View>
+           <View><Text style={{ backgroundColor: '#6452A1', height: 25, paddingLeft: 8, paddingTop: 3, width: 25, alignSelf: 'center', alignContent: 'center', borderRadius: 25, color: '#FFF' }}>2</Text></View>
            </View>
         </View>
 
@@ -110,7 +110,7 @@ export class Chats extends Component {
           </View>
         </View>
         <View style={{alignContent: 'center', alignSelf: 'center' }}>
-            <View><Text style={{ backgroundColor: '#00bc48', height: 25, paddingLeft: 8, paddingTop: 3, width: 25, alignSelf: 'center', alignContent: 'center', borderRadius: 25, color: '#FFF' }}>1</Text></View>
+            <View><Text style={{ backgroundColor: '#6452A1', height: 25, paddingLeft: 8, paddingTop: 3, width: 25, alignSelf: 'center', alignContent: 'center', borderRadius: 25, color: '#FFF' }}>1</Text></View>
             </View>
         </View>
 
@@ -124,7 +124,7 @@ export class Chats extends Component {
             </View>
           </View>
         <View style={{alignContent: 'center', alignSelf: 'center' }}>
-           <View><Text style={{ backgroundColor: '#00bc48', height: 25, paddingLeft: 8, paddingTop: 3, width: 25, alignSelf: 'center', alignContent: 'center', borderRadius: 25, color: '#FFF' }}>9</Text></View>
+           <View><Text style={{ backgroundColor: '#6452A1', height: 25, paddingLeft: 8, paddingTop: 3, width: 25, alignSelf: 'center', alignContent: 'center', borderRadius: 25, color: '#FFF' }}>9</Text></View>
            </View>
         </View>
 
@@ -138,7 +138,7 @@ export class Chats extends Component {
         </View>
         </View>
         <View style={{alignContent: 'center', alignSelf: 'center' }}>
-        <View><Text style={{ backgroundColor: '#00bc48', height: 25, paddingLeft: 8, paddingTop: 3, width: 25, alignSelf: 'center', alignContent: 'center', borderRadius: 25, color: '#FFF' }}>3</Text></View>
+        <View><Text style={{ backgroundColor: '#6452A1', height: 25, paddingLeft: 8, paddingTop: 3, width: 25, alignSelf: 'center', alignContent: 'center', borderRadius: 25, color: '#FFF' }}>3</Text></View>
         </View>
         </View>
 

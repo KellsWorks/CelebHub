@@ -1,13 +1,26 @@
 import React, {Component} from 'react';
-import {Text, StyleSheet, View} from 'react-native';
+import {Text, Image, StyleSheet, View} from 'react-native';
 import {COLORS, FONTS, SIZES, PADDINGS, MARGINS} from '../../res/Themes';
 
 export class settings extends Component {
   render() {
     return (
-      <View>
+      <View style={styles.container}>
         <View style={styles.header}>
           <Text style={styles.heading}>Settings</Text>
+        </View>
+        <View style={styles.imageHolder}>
+          <Image
+            source={{
+              uri:
+                'https://i0.wp.com/malawi24.com/wp-content/uploads/2020/06/Martse-musician.jpg?fit=608%2C472&ssl=1',
+            }}
+            style={styles.image}
+          />
+          <View>
+          <Text style={styles.welcome}>Good morning!</Text>
+          <Text style={styles.name}>Ella chiwaya</Text>
+          </View>
         </View>
       </View>
     );
@@ -17,6 +30,32 @@ export class settings extends Component {
 export default settings;
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: COLORS.white,
+  },
+  welcome: {
+    fontFamily: FONTS.medium,
+    fontSize: SIZES.h2,
+    paddingLeft: PADDINGS.pl5,
+    color: COLORS.accent,
+  },
+  name: {
+    fontFamily: FONTS.medium,
+    fontSize: SIZES.h6,
+    paddingLeft: PADDINGS.pl5,
+    color: COLORS.accent,
+  },
+  imageHolder: {
+    padding: PADDINGS.pa20,
+    flexDirection: 'row',
+  },
+  image: {
+    width: 60,
+    height: 60,
+    borderRadius: 150 / 2,
+    borderColor: COLORS.primaryColor,
+  },
   header: {
     paddingTop: 64,
     paddingBottom: 16,

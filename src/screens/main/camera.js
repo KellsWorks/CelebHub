@@ -5,10 +5,10 @@ import {COLORS, FONTS, SIZES, PADDINGS, MARGINS} from '../../res/Themes';
 const camera = ({}) => {
   return (
     <View>
-        <View style={styles.header}>
-          <Text style={styles.heading}>Camera</Text>
-        </View>
+      <View style={styles.header}>
+        <Text style={styles.heading}>Camera</Text>
       </View>
+    </View>
   );
 };
 

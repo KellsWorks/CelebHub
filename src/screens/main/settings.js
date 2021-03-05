@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Text, Image, StyleSheet, View} from 'react-native';
+import {Text, StyleSheet, View} from 'react-native';
 import {COLORS, FONTS, SIZES, PADDINGS, MARGINS} from '../../res/Themes';
 
 export class settings extends Component {
@@ -9,19 +9,7 @@ export class settings extends Component {
         <View style={styles.header}>
           <Text style={styles.heading}>Settings</Text>
         </View>
-        <View style={styles.imageHolder}>
-          <Image
-            source={{
-              uri:
-                'https://i0.wp.com/malawi24.com/wp-content/uploads/2020/06/Martse-musician.jpg?fit=608%2C472&ssl=1',
-            }}
-            style={styles.image}
-          />
-          <View>
-          <Text style={styles.welcome}>Good morning!</Text>
-          <Text style={styles.name}>Ella chiwaya</Text>
-          </View>
-        </View>
+        <Text>This is a blank view</Text>
       </View>
     );
   }
@@ -57,8 +45,8 @@ const styles = StyleSheet.create({
     borderColor: COLORS.primaryColor,
   },
   header: {
-    paddingTop: 64,
-    paddingBottom: 16,
+    paddingTop: 50,
+    paddingBottom: 10,
     paddingLeft: MARGINS.ml20,
     paddingRight: MARGINS.mr20,
     backgroundColor: MARGINS.white,

@@ -6,6 +6,7 @@ import camera from './main/camera';
 import settings from './main/settings';
 import calls from './main/calls';
 import Icon from 'react-native-vector-icons/Ionicons';
+import {COLORS} from '../res/Themes';
 
 
 const Home = ({}) => {
@@ -46,7 +47,7 @@ const Home = ({}) => {
           break;
       }
 
-      return <Icon name={iconName} size={30}  color={focused ? '#6452A1' : '#9c9fa2'}/>;
+      return <Icon name={iconName} size={30}  color={focused ? COLORS.primaryColor : COLORS.accent}/>;
     },
   });
 

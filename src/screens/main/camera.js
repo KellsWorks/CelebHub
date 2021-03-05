@@ -16,8 +16,8 @@ export default camera;
 
 const styles = StyleSheet.create({
   header: {
-    paddingTop: 64,
-    paddingBottom: 16,
+    paddingTop: 50,
+    paddingBottom: 10,
     paddingLeft: MARGINS.ml20,
     paddingRight: MARGINS.mr20,
     backgroundColor: MARGINS.white,

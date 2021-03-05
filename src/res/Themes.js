@@ -1,15 +1,17 @@
 /* eslint-disable prettier/prettier */
 export const COLORS = {
   white: '#FFF',
-  primaryColor: '#6452A1',
+  primaryColor: '#23b08d',
   secondarySurface: '#ececec',
   accent: '#a2a4a8',
   border: '#EBECF4',
   shadow: '#454D65',
+  
+  textPrimary: '#222222',
 
 
-  blue: '#0099fb',
-  red: '#fb0029',
+  blue: '#64a3f6',
+  red: '#ff3824',
 };
 
 export const FONTS = {

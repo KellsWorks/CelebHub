@@ -3,7 +3,9 @@ import React, {useState} from 'react';
 import {Image, TouchableOpacity, StyleSheet, Text, View} from 'react-native';
 import FormInput from '../screens/components/FormInput';
 import FormButton from '../screens/components/FormButton';
-import SocialButton from '../screens/components/SocialButton';
+
+
+import {COLORS, FONTS} from '../res/Themes';
 
 const SignIn = ({navigation}) => {
   const [email, setEmail] = useState();
@@ -34,7 +36,7 @@ const SignIn = ({navigation}) => {
         onPress={() => navigation.navigate('Home')}
       />
 
-      <TouchableOpacity style={styles.forgotButton} onPress={() => {}}>
+      <TouchableOpacity style={styles.forgotButton} onPress={() => {navigation.navigate('SignUp')}}>
         <Text style={styles.navButtonText}>Forgot password?</Text>
       </TouchableOpacity>
 
@@ -64,7 +66,7 @@ const styles = StyleSheet.create({
     resizeMode: 'cover',
   },
   text: {
-    fontFamily: 'poppins_bold',
+    fontFamily: FONTS.bold,
     fontSize: 28,
     marginBottom: 10,
     color: '#051d5f',
@@ -78,6 +80,6 @@ const styles = StyleSheet.create({
   navButtonText: {
     fontSize: 18,
     fontFamily: 'poppins_regular',
-    color: '#6452A1',
+    color: COLORS.primaryColor,
   },
 });

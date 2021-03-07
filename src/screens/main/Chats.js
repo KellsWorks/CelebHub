@@ -44,7 +44,7 @@ export class Chats extends Component {
                   justifyContent: 'center',
                 }}
                 source={require('../images/ellipse_primary.png')}>
-                <Image source={require('../images/user8-128x128.jpg')} style={styles.activityImage} />
+                <Image source={require('../images/kells.jpg')} style={styles.activityImage} />
 
               </ImageBackground>
 
@@ -88,7 +88,7 @@ export class Chats extends Component {
                   justifyContent: 'center',
                 }}
                 source={require('../images/ellipse_primary.png')}>
-                <Image source={require('../images/user7-128x128.jpg')} style={styles.activityImage} />
+                <Image source={require('../images/kells.jpg')} style={styles.activityImage} />
 
               </ImageBackground>
 
@@ -110,7 +110,7 @@ export class Chats extends Component {
                   justifyContent: 'center',
                 }}
                 source={require('../images/ellipse_primary.png')}>
-                <Image source={require('../images/user5-128x128.jpg')} style={styles.activityImage} />
+                <Image source={require('../images/kells.jpg')} style={styles.activityImage} />
 
               </ImageBackground>
 
@@ -132,7 +132,7 @@ export class Chats extends Component {
                   justifyContent: 'center',
                 }}
                 source={require('../images/ellipse_primary.png')}>
-                <Image source={require('../images/user6-128x128.jpg')} style={styles.activityImage} />
+                <Image source={require('../images/kells.jpg')} style={styles.activityImage} />
 
               </ImageBackground>
 

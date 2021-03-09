@@ -6,6 +6,8 @@ import {ChatRoom} from '../../types';
 
 import styles from './styles';
 
+import moment from 'moment';
+
 export type ChatRoomProps = {
     chatRoom: ChatRoom;
 }
@@ -28,7 +30,7 @@ const ChatList = (props: ChatRoomProps) =>{
             </View>
             
             </View>
-            <View><Text style={styles.time}>Today</Text></View>
+            <View><Text style={styles.time}>{moment(chatRoom.lastMessage.createdAt).format("DD/MM/Y")}</Text></View>
         </View>
     )
 }

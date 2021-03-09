@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { StyleSheet } from 'react-native';
+import { StyleSheet, FlatList } from 'react-native';
 
 import { SafeAreaView } from 'react-native-safe-area-context';
 
@@ -8,15 +8,20 @@ import { Text, View } from '../components/Themed';
 
 import ChatList from '../components/ChatList';
 
-import ChatRooms from '../data/ChatRooms';
+import chatRooms from '../data/ChatRooms';
 
 export default function TabOneScreen() {
   return (
-    <SafeAreaView>
       <View style={styles.container}>
-        <ChatList chatRoom={ChatRooms[0]}/>
+        <FlatList 
+        data={chatRooms} 
+        renderItem={
+          ({item}) => <ChatList chatRoom={item}/>
+        }
+        keyExtractor={(item) => item.id}
+        style={{ width: '100%' }}
+        />
       </View>
-    </SafeAreaView>
   );
 }
 

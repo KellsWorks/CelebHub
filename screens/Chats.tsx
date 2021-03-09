@@ -8,11 +8,13 @@ import { Text, View } from '../components/Themed';
 
 import ChatList from '../components/ChatList';
 
+import ChatRooms from '../data/ChatRooms';
+
 export default function TabOneScreen() {
   return (
     <SafeAreaView>
       <View style={styles.container}>
-        <ChatList chatRoom={{ lastMessage: {content: "Hell, yea!!!"}}}/>
+        <ChatList chatRoom={ChatRooms[0]}/>
       </View>
     </SafeAreaView>
   );

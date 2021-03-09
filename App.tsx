@@ -9,8 +9,9 @@ import Navigation from './navigation';
 import AppLoading from 'expo-app-loading';
 import * as Font from 'expo-font';
 
-import { Text, View, StyleSheet } from 'react-native'
-import LottieView from 'lottie-react-native'
+import { StyleSheet } from 'react-native'
+
+import AnimatedSplash from "react-native-animated-splash-screen";
 
 const LoadFonts = () =>{
   return Font.loadAsync({
@@ -20,7 +21,7 @@ const LoadFonts = () =>{
   });
 }
 
-export default function App() {
+export default function App(this: any) {
 
   const isLoadingComplete = useCachedResources();
   const colorScheme = useColorScheme();
@@ -33,27 +34,29 @@ export default function App() {
         startAsync={LoadFonts}
         onFinish={() => setFontLoaded(true)}
         onError={(err: any) => console.error(err)}
-      />
-    );
+      >
+      </AppLoading>
+    ); 
   }
 
   if (!isLoadingComplete) {
-    return (
-      <View style={styles.container}>
-        <Text style={styles.text}>CelebHub</Text>
-            <LottieView
-              autoPlay
-              source={require('./assets/images/loadingAnimation.json')}
-              style={{width: '20%'}}
-            />
-      </View>
-    );
+    
+    return null;
   } else {
     return (
+      <AnimatedSplash
+      translucent={true}
+      isLoaded={this.state.isLoaded}
+      logoImage={require("./assets/logo.png")}
+      backgroundColor={"#262626"}
+      logoHeight={150}
+      logoWidth={150}
+      >
       <SafeAreaProvider>
         <Navigation colorScheme={colorScheme} />
         <StatusBar style="light"/>
       </SafeAreaProvider>
+    </AnimatedSplash>
     );
   }
 }

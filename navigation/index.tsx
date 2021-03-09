@@ -2,15 +2,16 @@ import { NavigationContainer, DefaultTheme, DarkTheme } from '@react-navigation/
 import { createStackNavigator } from '@react-navigation/stack';
 import * as React from 'react';
 import { ColorSchemeName } from 'react-native';
+import { View } from '../components/Themed';
 import Colors from '../constants/Colors';
+
+import {Ionicons} from '@expo/vector-icons';
 
 import NotFoundScreen from '../screens/NotFoundScreen';
 import { RootStackParamList } from '../types';
 import BottomTabNavigator from './BottomTabNavigator';
 import LinkingConfiguration from './LinkingConfiguration';
 
-// If you are not familiar with React Navigation, we recommend going through the
-// "Fundamentals" guide: https://reactnavigation.org/docs/getting-started
 export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
   return (
     <NavigationContainer
@@ -21,8 +22,6 @@ export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeNa
   );
 }
 
-// A root stack navigator is often used for displaying modals on top of all other content
-// Read more here: https://reactnavigation.org/docs/modal
 const Stack = createStackNavigator<RootStackParamList>();
 
 function RootNavigator() {
@@ -38,10 +37,23 @@ function RootNavigator() {
       headerTitleStyle: {
         fontSize: 25,
         fontWeight: '800',
+        fontFamily: 'Font-bold',
       }
      }}
     >
-      <Stack.Screen name="Root" component={BottomTabNavigator} />
+      <Stack.Screen name="Root" 
+      component={BottomTabNavigator} 
+      options={{ 
+        title: 'CelebHub',
+        headerRight: () => (
+          <View style={{ width: 110, flexDirection: 'row', backgroundColor: Colors.light.tint, justifyContent: 'space-between', paddingRight: 10}}>
+            <Ionicons name="people-outline"  size={25} color={Colors.light.background}/>
+            <Ionicons name="search-outline"  size={25} color={Colors.light.background}/>
+            <Ionicons name="ellipsis-horizontal-circle"  size={25} color={Colors.light.background}/>
+          </View>
+        )
+       }}
+      />
       <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
     </Stack.Navigator>
   );

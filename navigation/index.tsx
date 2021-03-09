@@ -60,9 +60,14 @@ function RootNavigator() {
       <Stack.Screen name="ChatRoom" component={ChatRoom}
       options= {({route}) => ({
         title: route.params.name,
+        headerStyle : {
+          backgroundColor: Colors.light.tint,
+        },
         headerRight: () => (
-          <View>
-            
+          <View style={{  width: 110, flexDirection: 'row', backgroundColor: Colors.light.tint, justifyContent: 'space-between', paddingRight: 10 }}>
+            <Ionicons name="videocam" size={25} color={'white'}/>
+            <Ionicons name="call" size={25} color={'white'}/>
+            <Ionicons name="ellipsis-horizontal-circle" size={25} color={'white'}/>
           </View>
         )
       })}

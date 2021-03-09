@@ -1,40 +1,61 @@
 import { Ionicons } from '@expo/vector-icons';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+
 import { createStackNavigator } from '@react-navigation/stack';
+
 import * as React from 'react';
 
-import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs'
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs'
 
 import Colors from '../constants/Colors';
+
 import useColorScheme from '../hooks/useColorScheme';
+
 import TabOneScreen from '../screens/TabOneScreen';
+
 import TabTwoScreen from '../screens/TabTwoScreen';
+
 import { BottomTabParamList, TabOneParamList, TabTwoParamList } from '../types';
 
-const BottomTab = createMaterialTopTabNavigator<BottomTabParamList>();
+const MainTab = createBottomTabNavigator<BottomTabParamList>();
 
 export default function BottomTabNavigator() {
   const colorScheme = useColorScheme();
 
   return (
-    <BottomTab.Navigator
+    <MainTab.Navigator
       initialRouteName="TabOne"
-      tabBarOptions={{ activeTintColor: Colors[colorScheme].tint }}>
-      <BottomTab.Screen
-        name="TabOne"
+      tabBarOptions={{ activeTintColor: Colors[colorScheme].tint,
+      labelStyle: {
+        fontFamily: 'Font-medium',
+        textTransform: 'capitalize',
+        fontSize: 18,
+      },
+      }}>
+      <MainTab.Screen
+        name="Chats"
         component={TabOneNavigator}
         options={{
-          tabBarIcon: ({ color }) => <TabBarIcon name="ios-code" color={color} />,
+          tabBarIcon: ({ color }) => <Ionicons name="chatbubble-ellipses-outline" color={color} size={25} />,
+          tabBarLabel: () => null,
         }}
       />
-      <BottomTab.Screen
-        name="TabTwo"
+      <MainTab.Screen
+        name="Calls"
         component={TabTwoNavigator}
         options={{
-          tabBarIcon: ({ color }) => <TabBarIcon name="ios-code" color={color} />,
+          tabBarIcon: ({ color }) => <Ionicons name="call-outline" color={color} size={25} />,
+          tabBarLabel: () => null,
         }}
       />
-    </BottomTab.Navigator>
+      <MainTab.Screen
+        name="Profile"
+        component={TabTwoNavigator}
+        options={{
+          tabBarIcon: ({ color }) => <Ionicons name="person-outline" color={color} size={25} />,
+          tabBarLabel: () => null,
+        }}
+      />
+    </MainTab.Navigator>
   );
 }
 
@@ -54,7 +75,7 @@ function TabOneNavigator() {
       <TabOneStack.Screen
         name="TabOneScreen"
         component={TabOneScreen}
-        options={{ headerTitle: 'Tab One Title' }}
+        options={{ headerShown: false  }}
       />
     </TabOneStack.Navigator>
   );
@@ -68,7 +89,7 @@ function TabTwoNavigator() {
       <TabTwoStack.Screen
         name="TabTwoScreen"
         component={TabTwoScreen}
-        options={{ headerTitle: 'Tab Two Title' }}
+        options={{ headerShown: false }}
       />
     </TabTwoStack.Navigator>
   );

@@ -29,7 +29,9 @@ function RootNavigator() {
     <Stack.Navigator 
     screenOptions={{ 
       headerStyle: {
-        backgroundColor: Colors.light.tint
+        backgroundColor: Colors.light.tint,
+        elevation: 0,
+        shadowOpacity: 0,
       },
       headerTintColor: Colors.light.background,
       headerTitle: 'CelebHub',

@@ -7,6 +7,8 @@ import Colors from '../constants/Colors';
 
 import {Ionicons} from '@expo/vector-icons';
 
+import ChatRoom from '../screens/ChatRoom';
+
 import NotFoundScreen from '../screens/NotFoundScreen';
 import { RootStackParamList } from '../types';
 import BottomTabNavigator from './MainTabNavigator';
@@ -34,7 +36,6 @@ function RootNavigator() {
         shadowOpacity: 0,
       },
       headerTintColor: Colors.light.background,
-      headerTitle: 'CelebHub',
       headerTitleAlign: 'left',
       headerTitleStyle: {
         fontSize: 25,
@@ -43,10 +44,10 @@ function RootNavigator() {
       }
      }}
     >
-      <Stack.Screen name="Root" 
+      <Stack.Screen name="CelebHub" 
       component={BottomTabNavigator} 
       options={{ 
-        title: 'CelebHub',
+        
         headerRight: () => (
           <View style={{ width: 110, flexDirection: 'row', backgroundColor: Colors.light.tint, justifyContent: 'space-between', paddingRight: 10}}>
             <Ionicons name="people-outline"  size={25} color={Colors.light.background}/>
@@ -55,6 +56,16 @@ function RootNavigator() {
           </View>
         )
        }}
+      />
+      <Stack.Screen name="ChatRoom" component={ChatRoom}
+      options= {({route}) => ({
+        title: route.params.name,
+        headerRight: () => (
+          <View>
+            
+          </View>
+        )
+      })}
       />
       <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
     </Stack.Navigator>

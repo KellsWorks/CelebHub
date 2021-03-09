@@ -27,6 +27,7 @@ const styles = StyleSheet.create({
         fontFamily: 'Font-normal',
         fontSize: 15,
         color: 'gray',
+        flexWrap: 'wrap',
     },
     time: {
         fontFamily: 'Font-normal',

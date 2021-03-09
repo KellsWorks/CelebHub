@@ -1,16 +1,18 @@
 import * as React from 'react';
+
 import { StyleSheet } from 'react-native';
+
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { Text, View } from '../components/Themed';
+
+import ChatList from '../components/ChatList';
 
 export default function TabOneScreen() {
   return (
     <SafeAreaView>
       <View style={styles.container}>
-        <Text>
-          Abelo
-        </Text>
+        <ChatList chatRoom={{ lastMessage: {content: "Hell, yea!!!"}}}/>
       </View>
     </SafeAreaView>
   );

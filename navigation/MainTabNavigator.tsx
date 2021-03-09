@@ -10,7 +10,7 @@ import Colors from '../constants/Colors';
 
 import useColorScheme from '../hooks/useColorScheme';
 
-import TabOneScreen from '../screens/TabOneScreen';
+import TabOneScreen from '../screens/Chats';
 
 import TabTwoScreen from '../screens/TabTwoScreen';
 

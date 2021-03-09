@@ -2131,7 +2131,15 @@
   resolved "https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.7.3.tgz#2ab0d5da2e5815f94b0b9d4b95d1e5f243ab2ca7"
   integrity sha512-KfRL3PuHmqQLOG+2tGpRO26Ctg+Cq1E01D2DMriKEATHgWLfeNDmq9e29Q9WIky0dQ3NPkd1mzYH8Lm936Z9qw==
 
-"@types/react-native@~0.63.2":
+"@types/react-native-onboarding-swiper@^1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@types/react-native-onboarding-swiper/-/react-native-onboarding-swiper-1.1.1.tgz#72c07c21be009bbabd4394d6608e37988fd339ee"
+  integrity sha512-E7bIk+VidjP44gcLXfmda18iEK9OGwgkei8nh0p2vFvmJNOU479CIEYKpXRe5UT08Jb4D4opjdSQWrNw6Ke59w==
+  dependencies:
+    "@types/react" "*"
+    "@types/react-native" "*"
+
+"@types/react-native@*", "@types/react-native@~0.63.2":
   version "0.63.51"
   resolved "https://registry.yarnpkg.com/@types/react-native/-/react-native-0.63.51.tgz#2fc45ab934801770cdbbcdc6ae5cd85c0e2a2a02"
   integrity sha512-lpJdBF7T/nZigbequu7p4NptZmTUKq8R7vRADkk00H8DR5igspL10B1F58MvNTu8o/TyqzPISyWoRARqaIy+mw==
@@ -3306,7 +3314,7 @@ data-urls@^1.1.0:
     whatwg-mimetype "^2.2.0"
     whatwg-url "^7.0.0"
 
-dayjs@^1.8.15, dayjs@^1.8.26:
+dayjs@^1.10.4, dayjs@^1.8.15, dayjs@^1.8.26:
   version "1.10.4"
   resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.10.4.tgz#8e544a9b8683f61783f570980a8a80eaf54ab1e2"
   integrity sha512-RI/Hh4kqRc1UKLOAf/T5zdMMX5DQIlDxwUe3wSyMMnEbGunnpENCdbUgM+dW7kXidZqCttBrmw7BhN4TMddkCw==
@@ -7014,6 +7022,13 @@ react-native-lightbox@^0.8.1:
   integrity sha512-TFZA6iKEEHpAUIXjMTRb6vx0/9rHgEKy3ZBiRAy295PwldYg5c8opwnbyURLIl522ykeqhVx9uGdXjSMIowLvA==
   dependencies:
     prop-types "^15.7.2"
+
+react-native-onboarding-swiper@^1.1.4:
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/react-native-onboarding-swiper/-/react-native-onboarding-swiper-1.1.4.tgz#cb2d97c769542228d3904a9da13e02359ed6e3f5"
+  integrity sha512-dG2J6giQpt5kKlU+Xe68E9xy+OkmC9Yf5XD7S1mJQ5VvwySfCIXnPojai0PEQ9NmbbH06k9lqN5Ik1PGYnIdVA==
+  dependencies:
+    tinycolor2 "^1.4.1"
 
 react-native-pager-view@^5.0.12:
   version "5.0.12"

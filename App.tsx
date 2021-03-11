@@ -1,5 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
+
 import React, {useState} from 'react';
+
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 import useCachedResources from './hooks/useCachedResources';
@@ -45,7 +47,7 @@ export default function App(this: any) {
   if (!isLoadingComplete) {
     
     return null;
-    
+
   } else {
     return (
       <SafeAreaProvider>

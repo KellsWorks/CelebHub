@@ -15,6 +15,8 @@ import TabOneScreen from '../screens/Chats';
 import TabTwoScreen from '../screens/TabTwoScreen';
 
 import { BottomTabParamList, TabOneParamList, TabTwoParamList } from '../types';
+import Profile from '../screens/Profile';
+import Calls from '../screens/Calls';
 
 const MainTab = createBottomTabNavigator<BottomTabParamList>();
 
@@ -41,7 +43,7 @@ export default function BottomTabNavigator() {
       />
       <MainTab.Screen
         name="Calls"
-        component={TabTwoNavigator}
+        component={Calls}
         options={{
           tabBarIcon: ({ color }) => <Ionicons name="call-outline" color={color} size={25} />,
           tabBarLabel: () => null,
@@ -49,7 +51,7 @@ export default function BottomTabNavigator() {
       />
       <MainTab.Screen
         name="Profile"
-        component={TabTwoNavigator}
+        component={Profile}
         options={{
           tabBarIcon: ({ color }) => <Ionicons name="person-outline" color={color} size={25} />,
           tabBarLabel: () => null,

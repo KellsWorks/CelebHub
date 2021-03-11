@@ -2,6 +2,7 @@ import React from 'react';
 import {View, Text, ImageBackground, Image, StyleSheet} from 'react-native';
 import {Ionicons} from '@expo/vector-icons';
 import Colors from '../constants/Colors';
+import FloatingButton from '../components/FloatingButton/FloatingButton';
 
 const CALLS = [
     {
@@ -15,8 +16,8 @@ const CALLS = [
 
 const Calls = () => {
     return(
-        <View>
-            <Text style={styles.missedText}>Missed calls</Text>
+        <View style={{ flex: 1, alignItems: 'center' }}>
+            {/* <Text style={styles.missedText}>Missed calls</Text>
             <View style={{ flexDirection: 'row' }}>
                 <Image source={require('../assets/images/kells.jpg')} style={{marginLeft: 10, borderWidth: 6, borderRadius: 80, height: 80, width: 80 }}/>
                 <View
@@ -130,7 +131,9 @@ const Calls = () => {
               </ImageBackground>
             </View>
         </View>
-        </View>
+        </View> */}
+
+        <FloatingButton style={{bottom: 100,  right: 60}}/>
         </View>
     );
 }

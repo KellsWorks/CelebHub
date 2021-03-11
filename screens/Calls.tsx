@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, Text, ImageBackground, Image, StyleSheet} from 'react-native';
-import {Ionicons} from '@expo/vector-icons';
+import {Ionicons, Feather} from '@expo/vector-icons';
 import Colors from '../constants/Colors';
 import FloatingButton from '../components/FloatingButton/FloatingButton';
 
@@ -16,8 +16,8 @@ const CALLS = [
 
 const Calls = () => {
     return(
-        <View style={{ flex: 1, alignItems: 'center' }}>
-            {/* <Text style={styles.missedText}>Missed calls</Text>
+        <View style={{ flex: 1}}>
+            <Text style={styles.missedText}>Missed calls</Text>
             <View style={{ flexDirection: 'row' }}>
                 <Image source={require('../assets/images/kells.jpg')} style={{marginLeft: 10, borderWidth: 6, borderRadius: 80, height: 80, width: 80 }}/>
                 <View
@@ -36,16 +36,16 @@ const Calls = () => {
                   John Doe
                 </Text>
                 <View style={{ flexDirection: 'row' }}>
-                  <Ionicons
-                    size={25}
-                    name="trending-down-outline"
+                  <Feather
+                    size={18}
+                    name="phone-missed"
                     color='red'
                   />
-                  <Ionicons
+                  <Feather
                     style={{marginLeft: 5}}
-                    size={25}
-                    name="time-outline"
-                    color='red'
+                    size={18}
+                    name="clock"
+                    color='gray'
                   />
                   <Text
                     style={{
@@ -94,16 +94,16 @@ const Calls = () => {
                   John Doe
                 </Text>
                 <View style={{ flexDirection: 'row' }}>
-                  <Ionicons
-                    size={25}
-                    name="trending-down-outline"
-                    color='red'
+                  <Feather
+                    size={18}
+                    name="phone-call"
+                    color={Colors.light.tint}
                   />
-                  <Ionicons
+                  <Feather
                     style={{marginLeft: 5}}
-                    size={25}
-                    name="time-outline"
-                    color='red'
+                    size={18}
+                    name="clock"
+                    color='gray'
                   />
                   <Text
                     style={{
@@ -131,7 +131,7 @@ const Calls = () => {
               </ImageBackground>
             </View>
         </View>
-        </View> */}
+        </View>
 
         <FloatingButton style={{bottom: 100,  right: 60}}/>
         </View>
@@ -151,6 +151,6 @@ const styles = StyleSheet.create({
         fontSize: 18,
         fontFamily: 'Font-medium',
         margin: 10,
-        color: '#64a3f6',
+        color: Colors.light.tint,
     },
 });

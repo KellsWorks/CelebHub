@@ -2,8 +2,6 @@ import * as React from 'react';
 
 import { StyleSheet, FlatList } from 'react-native';
 
-import { SafeAreaView } from 'react-native-safe-area-context';
-
 import { Text, View } from '../components/Themed';
 
 import ChatList from '../components/ChatList';
@@ -13,6 +11,7 @@ import chatRooms from '../data/ChatRooms';
 export default function TabOneScreen() {
   return (
       <View style={styles.container}>
+        <Text style={styles.chatRoomText}>Chat rooms</Text>
         <FlatList 
         data={chatRooms} 
         renderItem={
@@ -26,9 +25,15 @@ export default function TabOneScreen() {
 }
 
 const styles = StyleSheet.create({
+  chatRoomText: {
+    fontFamily: 'Font-medium',
+    fontSize: 22,
+    margin: 10,
+    color: 'gray',
+  },
   container: {
     flex: 1,
-    alignItems: 'center',
+    alignItems: 'flex-start',
     justifyContent: 'center',
   },
   title: {

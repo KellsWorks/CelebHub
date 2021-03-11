@@ -13,6 +13,7 @@ import NotFoundScreen from '../screens/NotFoundScreen';
 import { RootStackParamList } from '../types';
 import BottomTabNavigator from './MainTabNavigator';
 import LinkingConfiguration from './LinkingConfiguration';
+import useColorScheme from '../hooks/useColorScheme';
 
 
 export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
@@ -28,11 +29,14 @@ export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeNa
 const Stack = createStackNavigator<RootStackParamList>();
 
 function RootNavigator() {
+
+  const colorScheme = useColorScheme();
+
   return (
     <Stack.Navigator 
     screenOptions={{ 
       headerStyle: {
-        backgroundColor: Colors.light.tint,
+        backgroundColor: Colors[colorScheme].tint,
         elevation: 0,
         shadowOpacity: 0,
       },
@@ -50,7 +54,7 @@ function RootNavigator() {
       options={{ 
         
         headerRight: () => (
-          <View style={{ width: 110, flexDirection: 'row', backgroundColor: Colors.light.tint, justifyContent: 'space-between', paddingRight: 10}}>
+          <View style={{ width: 110, flexDirection: 'row', backgroundColor: Colors[colorScheme].tint, justifyContent: 'space-between', paddingRight: 10}}>
             <Ionicons name="people-outline"  size={25} color={Colors.light.background}/>
             <Ionicons name="search-outline"  size={25} color={Colors.light.background}/>
             <Ionicons name="ellipsis-horizontal-circle"  size={25} color={Colors.light.background}/>

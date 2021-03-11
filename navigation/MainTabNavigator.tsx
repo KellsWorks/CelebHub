@@ -21,12 +21,13 @@ import Calls from '../screens/Calls';
 const MainTab = createBottomTabNavigator<BottomTabParamList>();
 
 export default function BottomTabNavigator() {
+
   const colorScheme = useColorScheme();
 
   return (
     <MainTab.Navigator
       initialRouteName="TabOne"
-      tabBarOptions={{ activeTintColor: Colors[colorScheme].tint,
+      tabBarOptions={{ activeTintColor: Colors[colorScheme].select,
       labelStyle: {
         fontFamily: 'Font-medium',
         textTransform: 'capitalize',

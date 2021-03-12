@@ -1,15 +1,18 @@
 import * as React from 'react';
 
-import { StyleSheet, FlatList } from 'react-native';
+import { StyleSheet, FlatList, ImageBackground, Image } from 'react-native';
 
 import { Text, View } from '../components/Themed';
 
 import ChatList from '../components/ChatList';
 
 import chatRooms from '../data/ChatRooms';
+import Colors from '../constants/Colors';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 export default function TabOneScreen() {
   return (
+    <SafeAreaProvider>
       <View style={styles.container}>
         <Text style={styles.chatRoomText}>Chat rooms</Text>
         <FlatList 
@@ -21,6 +24,7 @@ export default function TabOneScreen() {
         style={{ width: '100%' }}
         />
       </View>
+      </SafeAreaProvider>
   );
 }
 

@@ -12,7 +12,6 @@ import useColorScheme from '../hooks/useColorScheme';
 
 import TabOneScreen from '../screens/Chats';
 
-import TabTwoScreen from '../screens/TabTwoScreen';
 
 import { BottomTabParamList, TabOneParamList, TabTwoParamList } from '../types';
 import Profile from '../screens/Profile';
@@ -83,6 +82,7 @@ function TabOneNavigator() {
     </TabOneStack.Navigator>
   );
 }
+
 
 const TabTwoStack = createStackNavigator<TabTwoParamList>();
 

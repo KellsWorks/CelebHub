@@ -1,4 +1,5 @@
 import { AntDesign } from '@expo/vector-icons'
+import { useNavigation } from '@react-navigation/core'
 import React, { Component } from 'react'
 import { Text, View, Image, Button, TouchableOpacity } from 'react-native'
 import Onboarding from 'react-native-onboarding-swiper'
@@ -6,6 +7,8 @@ import useColorScheme from '../hooks/useColorScheme'
 import Navigation from '../navigation/index'
 
 const OnboardingScreen = () => {
+
+    const navigation  = useNavigation();
 
     const colorScheme = useColorScheme();
     
@@ -26,7 +29,7 @@ const OnboardingScreen = () => {
             SkipButtonComponent={Skip}
             nextLabel={<AntDesign name="right" size={25}/>}
             DoneButtonComponent={Done}
-            onDone={() => (<Navigation colorScheme={colorScheme}/>)}
+            onDone={() => navigation.navigate("main")}
             pages={[
                 {
                     backgroundColor: '#01906d',

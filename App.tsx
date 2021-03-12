@@ -15,7 +15,14 @@ import AppLoading from 'expo-app-loading';
 import * as Font from 'expo-font';
 
 import { AsyncStorage } from 'react-native'
+
 import OnboardingScreen from './screens/OnboardingScreen';
+
+import { createStackNavigator } from '@react-navigation/stack';
+
+import MainTabNavigator from "./navigation/MainTabNavigator";
+import { NavigationContainer } from '@react-navigation/native';
+import Main from './screens/Main';
 
 const LoadFonts = () =>{
   return Font.loadAsync({
@@ -24,6 +31,8 @@ const LoadFonts = () =>{
     'Font-bold': require('./assets/fonts/poppins_bold.ttf'),
   });
 }
+
+const AppStack = createStackNavigator();
 
 export default function App(this: any) {
 
@@ -59,7 +68,7 @@ export default function App(this: any) {
         </AppLoading>
       ); 
     }
-    return (<OnboardingScreen/>)
+    return (<><StatusBar style="light"/><OnboardingScreen/></>)
   }else{
     if (!isLoadingComplete) {
     
@@ -78,10 +87,15 @@ export default function App(this: any) {
     ); 
   }
       return (
-        <SafeAreaProvider>
-          <Navigation colorScheme={colorScheme} />
+        <NavigationContainer>
+          <SafeAreaProvider>
           <StatusBar style="light"/>
+          <AppStack.Navigator headerMode="none">
+            <AppStack.Screen component={OnboardingScreen} name="onboard"/>
+            <AppStack.Screen component={Main} name="main"/>
+          </AppStack.Navigator>
         </SafeAreaProvider>
+        </NavigationContainer>
       );
     }
   }
